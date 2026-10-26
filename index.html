@@ -136,6 +136,11 @@ a.pill:hover{background:var(--mint-2);transform:translateY(-1px)}
 .sl-dots button{width:8px;height:8px;border-radius:999px;border:0;background:var(--mint-2);padding:0;cursor:pointer;transition:width .3s,background .3s}
 .sl-dots button[aria-current="true"]{width:24px;background:var(--leaf)}
 .brochure{align-items:start}
+.career-note{background:#fff;border-left:4px solid var(--leaf);border-radius:12px;padding:12px 16px;display:grid;gap:4px}
+.cn-label{font-family:var(--display);font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--pine)}
+.cn-label b{color:var(--ink)}
+.career-note p{font-size:.95rem}
+.cn-change{font-size:.85rem;color:var(--pine);justify-self:start}
 .soon-msg{background:var(--cream);border-radius:12px;padding:10px 12px;font-size:.9rem}
 .btn:focus-visible,summary:focus-visible,.chip-btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--forest);outline-offset:3px}
 .btn-sun{background:var(--sun);color:var(--ink)} .btn-sun:hover{background:var(--sun-deep)}
@@ -918,7 +923,7 @@ footer strong{color:#fff;font-family:var(--display)}
       <div class="sec-head">
         <span class="eyebrow">Módulos por carrera</span>
         <h2>Tu carrera, tu reto</h2>
-        <p class="lead">La mañana es igual para todos. En la tarde, cada carrera resuelve un problema real de la finca con los datos del día, guiada por su propio docente.</p>
+        <p class="lead">La mañana es igual para todos. En la tarde, durante el bloque del reto, cada carrera resuelve un problema real de la finca con los datos del día, guiada por su propio docente.</p>
       </div>
       <div class="chips" role="group" aria-label="Elegir carrera" id="careerChips"></div>
       <div class="career-panel" id="careerPanel" aria-live="polite"></div>
@@ -1027,7 +1032,7 @@ footer strong{color:#fff;font-family:var(--display)}
       '<div class="rot"><table><thead><tr><th>Horario</th><th>Circuito de vida</th><th>Agroecología</th><th>Autocultivo</th></tr></thead><tbody>'+
       '<tr><td>10:30–11:05</td><td><span class="g gA">A</span></td><td><span class="g gB">B</span></td><td><span class="g gC">C</span></td></tr>'+
       '<tr><td>11:10–11:45</td><td><span class="g gC">C</span></td><td><span class="g gA">A</span></td><td><span class="g gB">B</span></td></tr>'+
-      '<tr><td>11:50–12:25</td><td><span class="g gB">B</span></td><td><span class="g gC">C</span></td><td><span class="g gA">A</span></td></tr></tbody></table></div>',
+      '<tr><td>11:50–12:25</td><td><span class="g gB">B</span></td><td><span class="g gC">C</span></td><td><span class="g gA">A</span></td></tr></tbody></table></div>'+'<p class="proto">Las estaciones son iguales para todas las carreras. Lo específico de cada carrera se hace en la tarde, en el reto.</p>',
      take:"Hoja de datos, planta adoptada, sistema armado"},
     {t:"12:25",min:15,k:"learn",icon:"i-sprout",title:"Cosecha para el almuerzo",teaser:"Todo el grupo cosecha lo que va a comer",
      body:'<ol><li>Los tres grupos se reúnen en las camas de cultivo.</li><li>La familia muestra cómo cortar la lechuga sin dañar la raíz ni el sistema.</li><li>Cada estudiante cosecha una planta y la lleva a la cocina.</li><li>Se pesa la cosecha del día y se anota en el registro de la finca.</li></ol>',
@@ -1035,7 +1040,7 @@ footer strong{color:#fff;font-family:var(--display)}
     {t:"12:40",min:50,k:"break",icon:"i-plate",title:"Almuerzo del surco al plato",teaser:"Comes lo que acabas de cosechar",
      body:'<ol><li>Ensalada con las hortalizas que cosechaste y, en temporada, tilapia del sistema.</li><li>La familia nombra de dónde viene cada ingrediente.</li><li>Mesas mezcladas con la familia y el equipo.</li></ol>',take:""},
     {t:"13:30",min:55,k:"reto",icon:"i-bulb",title:"Reto aplicado por carrera",teaser:"Un problema real de la finca, con tus datos",
-     body:'<ol><li>Tu docente lidera el reto de tu carrera y entrega la ficha con los datos medidos en la mañana.</li><li>30 minutos de análisis; la familia responde como experta.</li><li>Preparas un pitch de 3 minutos: problema, dato clave, propuesta, costo.</li></ol><p><a href="#carreras" class="btn btn-ghost" data-jump="careerChips">Ver el reto de cada carrera</a></p>',
+     body:'<ol><li><b>Trabajo de campo (15 min):</b> con tu docente vuelves al sistema y tomas los datos propios de tu carrera.</li><li><b>Análisis (25 min):</b> con esos datos y los de la mañana resuelves el reto; la familia responde como experta.</li><li><b>Pitch (15 min):</b> preparas una presentación de 3 minutos: problema, dato clave, propuesta, costo.</li></ol><p><a href="#carreras" class="btn btn-ghost" data-jump="careerChips">Ver el reto de cada carrera</a></p>'+'<div class="career-note"><span class="cn-label">Tu carrera: <b data-cn="n"></b></span><p><b>Trabajo de campo:</b> <span data-cn="e"></span></p><p><b>Reto:</b> <span data-cn="r"></span></p><a href="#" class="cn-change" data-jump="careerChips">Cambiar carrera</a></div>',
      take:"Ficha del reto y pliego"},
     {t:"14:25",min:30,k:"reto",icon:"i-chat",title:"Socialización",teaser:"Presentas y la familia elige una propuesta",
      body:'<ol><li>Cada grupo presenta 3 minutos y recibe retroalimentación.</li><li>La familia elige el reto que probará en la finca.</li><li>Muro de aprendizajes: algo que aprendí, algo que voy a hacer.</li><li>Quiz de salida en el celular.</li></ol>',take:"Pitch y tarjeta en el muro"},
@@ -1082,12 +1087,13 @@ footer strong{color:#fff;font-family:var(--display)}
     {n:"Agronomía",e:"Conteo de plantas por m², ración diaria de alimento y lectura de deficiencias en las hojas",r:"Balance peces–plantas: con la ración actual, ¿cuántas plantas puede nutrir el sistema y qué cultivos rotar según el clima de la finca?",d:"Plan de siembra de 3 meses con el balance calculado"},
     {n:"Ing. ambiental",e:"Caudal con balde y cronómetro, agua repuesta por semana",r:"Balance de agua y energía: cuánta agua ahorra y cómo bajar el gasto de la bomba",d:"Esquema de mejora con costo"},
     {n:"Administración",e:"Entrevista a la familia y mapa de lo que entra y sale de la finca: agua, alimento, cosecha, residuos y saberes",r:"Innovación sostenible: proponer un nuevo servicio o producto para la finca que cree valor de un recurso subutilizado, como el lodo del filtro o el saber de la familia",d:"Modelo de negocio sostenible en una página, con un indicador de impacto social y ambiental"},
-    {n:"Diseño",e:"Observación del recorrido: dónde se confunden los visitantes y qué preguntan",r:"Diseño de información: hacer que cualquier visitante entienda el ciclo del agua sin guía",d:"Prototipo de 2 letreros, probado con otro grupo y mejorado"}
+    {n:"Diseño",e:"Durante la mañana anotan dónde se confunden los visitantes; en la tarde entrevistan a 3 compañeros sobre lo que no entendieron",r:"Diseño de información: hacer que cualquier visitante entienda el ciclo del agua sin guía",d:"Prototipo de 2 letreros, probado con otro grupo y mejorado"}
   ];
   var cc=document.getElementById('careerChips'), cp=document.getElementById('careerPanel');
   cc.innerHTML=careers.map(function(c,i){return '<button class="chip-btn" aria-pressed="'+(i===0)+'" data-c="'+i+'">'+c.n+'</button>';}).join('');
   function showCareer(i){var c=careers[i];
-    cp.innerHTML='<div><h4>En las estaciones</h4><p class="big">'+c.e+'</p></div><div><h4>Reto de la tarde</h4><p class="big">'+c.r+'</p></div><div><h4>Entregable</h4><p class="big">'+c.d+'</p></div>';
+    document.querySelectorAll('[data-cn]').forEach(function(el){el.textContent=el.dataset.cn==='n'?c.n:c[el.dataset.cn];});
+    cp.innerHTML='<div><h4>Trabajo de campo · 15 min</h4><p class="big">'+c.e+'</p></div><div><h4>Reto de la tarde</h4><p class="big">'+c.r+'</p></div><div><h4>Entregable</h4><p class="big">'+c.d+'</p></div>';
     [].forEach.call(cc.children,function(b){b.setAttribute('aria-pressed',String(b.dataset.c==i));});}
   cc.addEventListener('click',function(e){var b=e.target.closest('[data-c]'); if(b) showCareer(+b.dataset.c);});
   showCareer(0);
