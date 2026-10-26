@@ -1078,11 +1078,11 @@ footer strong{color:#fff;font-family:var(--display)}
 
   /* careers */
   var careers=[
-    {n:"Biología",e:"Biometría de 10 peces y observación de raíces con lupa",r:"Diagnóstico de salud: ¿está maduro el biofiltro y sanos los peces?",d:"Informe con 3 indicadores en semáforo"},
-    {n:"Agronomía",e:"Conteo de plantas por m² y ración diaria",r:"Plan de cultivo: cuántas plantas sostiene la ración actual y qué rotar",d:"Calendario de siembra de 3 meses"},
+    {n:"Biología",e:"Biometría de 10 peces y observación con lupa de raíces y biopelícula del biofiltro",r:"Diagnóstico de salud: ¿está maduro el biofiltro y sanos los peces?",d:"Informe con 3 indicadores en semáforo"},
+    {n:"Agronomía",e:"Conteo de plantas por m², ración diaria de alimento y lectura de deficiencias en las hojas",r:"Balance peces–plantas: con la ración actual, ¿cuántas plantas puede nutrir el sistema y qué cultivos rotar según el clima de la finca?",d:"Plan de siembra de 3 meses con el balance calculado"},
     {n:"Ing. ambiental",e:"Caudal con balde y cronómetro, agua repuesta por semana",r:"Balance de agua y energía: cuánta agua ahorra y cómo bajar el gasto de la bomba",d:"Esquema de mejora con costo"},
-    {n:"Administración",e:"Costos reales de alimento, energía y mano de obra",r:"Costo por kilo y precio del kit DIY",d:"Hoja de costos y punto de equilibrio"},
-    {n:"Diseño",e:"Fotografía y bocetos del sistema y del kit",r:"Señalética para las 5 partes del sistema y una página del manual",d:"5 letreros y 1 página rediseñada"}
+    {n:"Administración",e:"Entrevista a la familia y mapa de lo que entra y sale de la finca: agua, alimento, cosecha, residuos y saberes",r:"Innovación sostenible: proponer un nuevo servicio o producto para la finca que cree valor de un recurso subutilizado, como el lodo del filtro o el saber de la familia",d:"Modelo de negocio sostenible en una página, con un indicador de impacto social y ambiental"},
+    {n:"Diseño",e:"Observación del recorrido: dónde se confunden los visitantes y qué preguntan",r:"Diseño de información: hacer que cualquier visitante entienda el ciclo del agua sin guía",d:"Prototipo de 2 letreros, probado con otro grupo y mejorado"}
   ];
   var cc=document.getElementById('careerChips'), cp=document.getElementById('careerPanel');
   cc.innerHTML=careers.map(function(c,i){return '<button class="chip-btn" aria-pressed="'+(i===0)+'" data-c="'+i+'">'+c.n+'</button>';}).join('');
