@@ -480,6 +480,21 @@ footer strong{color:#fff;font-family:var(--display)}
 .thumbs img{object-fit:cover!important}
 .card .art{aspect-ratio:4/3}
 .card[data-cat="kit"] .art img{object-fit:cover!important}
+.stat{margin-top:14px;font-size:.98rem;color:#E8EAE4;border-left:3px solid #B9D79A;padding-left:14px}
+.stat b{font-family:var(--display);font-size:1.4rem;color:#fff;margin-right:4px}
+.stat small{display:block;color:#C9CEC6;font-size:.78rem;margin-top:4px}
+.fin{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:var(--char);color:#E8EAE4;border-radius:26px;padding:30px 8px}
+@media (max-width:820px){.fin{grid-template-columns:1fr}.fin-kpi + .fin-kpi{border-left:0!important;border-top:1px solid rgba(255,255,255,.18);padding-top:20px!important;margin-top:16px}}
+.fin-kpi{display:grid;gap:4px;justify-items:center;text-align:center;padding:4px 24px}
+.fin-kpi + .fin-kpi{border-left:1px solid rgba(255,255,255,.18)}
+.fin-kpi span{font-family:var(--display);text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;color:#B9D79A}
+.fin-kpi b{font-family:var(--display);font-size:2.4rem;color:#fff;font-variant-numeric:tabular-nums;line-height:1.1}
+.fin-kpi small{color:#C9CEC6;font-size:.85rem}
+.funders{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+@media (max-width:820px){.funders{grid-template-columns:1fr}}
+.funders div{background:var(--cream);border-radius:16px;padding:14px 16px;display:grid;gap:2px;text-align:center}
+.funders b{font-family:var(--display)}
+.funders span{color:var(--muted);font-size:.9rem;font-style:italic}
 </style>
 
 <!-- ======= SVG library ======= -->
@@ -651,7 +666,7 @@ footer strong{color:#fff;font-family:var(--display)}
         <div class="feature"><div class="tile"><svg class="ico"><use href="#i-chart"/></svg></div><div><h3>Datos reales para tu clase</h3><p>Tus mediciones entran al registro de la finca y tu docente recibe el informe.</p></div></div>
         <div class="feature"><div class="tile"><svg class="ico"><use href="#i-users"/></svg></div><div><h3>Campesinos que enseñan</h3><p>La familia de la finca dirige el taller. Su saber vale tanto como el del laboratorio.</p></div></div>
       </div>
-      <div class="banner"><span>Aprender · Cultivar · Conservar</span></div>
+      <div class="banner"><span>El agua que cuidas, vuelve</span></div>
     </div>
   </section>
 
@@ -660,7 +675,8 @@ footer strong{color:#fff;font-family:var(--display)}
       <div class="sec-head" style="margin:0">
         <span class="eyebrow">Por qué existe</span>
         <h2>Tu taller financia el agua del corredor</h2>
-        <p class="lead">Gachantivá pierde saberes, agua y jóvenes. Cada taller genera ingreso para la familia campesina y para el proyecto, y una parte protege el agua y el robledal. Así la educación se convierte en conservación.</p>
+        <p class="lead">Gachantivá pierde saberes, agua y jóvenes, y las salidas de campo de las universidades muchas veces no dejan nada. Cada taller genera ingreso para la familia campesina y, a través de la Fundación Morichales, una parte va al agua de la vereda. Así la educación se convierte en conservación.</p>
+        <p class="stat"><b>53,5 %</b> de los jóvenes en Colombia dice que la falta de experiencia es una barrera para conseguir trabajo. Aquí la ganan en el campo.<small>Hub Conexión Juvenil, vía Portafolio (09/10/2026)</small></p>
         <div class="pill-row" style="margin-top:8px"><a class="pill" href="#taller-universitario"><svg class="ico"><use href="#i-drop"/></svg>Conservación hídrica</a><a class="pill" href="#taller-universitario"><svg class="ico"><use href="#i-leaf"/></svg>Robledal protegido</a><a class="pill" href="#taller-universitario"><svg class="ico"><use href="#i-users"/></svg>Bienestar campesino</a></div>
       </div>
       <div class="cycle"><svg viewBox="0 0 400 400" role="group" aria-label="Círculo virtuoso: toca cada etapa">
@@ -691,7 +707,7 @@ footer strong{color:#fff;font-family:var(--display)}
             <div class="meta"><span><svg class="ico"><use href="#i-clock"/></svg>6 h 45 min</span><span><svg class="ico"><use href="#i-users"/></svg>10–30 estudiantes</span></div>
             <h3>Taller Vivencial de Acuaponía</h3>
             <p>Del pez a la lechuga: miden, siembran, construyen y resuelven un reto real de la finca según su carrera.</p>
-            <div class="foot"><span class="price">100.000 COP <small>por estudiante</small></span><a class="btn btn-forest" href="#taller-universitario">Ver itinerario</a></div>
+            <div class="foot"><span class="price">171.360 COP <small>por estudiante</small></span><a class="btn btn-forest" href="#taller-universitario">Ver itinerario</a></div>
           </div>
         </article>
         <article class="card">
@@ -704,6 +720,27 @@ footer strong{color:#fff;font-family:var(--display)}
           </div>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section class="band" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Para aliados</span>
+        <h2>Un proyecto con respaldo</h2>
+        <p class="lead">ECONEXO conecta a la academia, el gobierno y la comunidad campesina. La infraestructura se financia con aliados públicos y se recupera con los talleres.</p>
+      </div>
+      <div class="fin">
+        <div class="fin-kpi"><span>Inversión inicial</span><b>28,9 M</b><small>COP · tanques, bombas, equipos de medición, cuidador de peces, kits</small></div>
+        <div class="fin-kpi"><span>Ingresos año 1</span><b>136,7 M</b><small>COP · egresos operativos 119,3 M</small></div>
+        <div class="fin-kpi"><span>Recuperación</span><b>Mes 16</b><small>Con 40 estudiantes al mes al inicio</small></div>
+      </div>
+      <div class="funders">
+        <div><b>Gobernación de Boyacá</b><span>Fondo FINCA</span></div>
+        <div><b>Alcaldía de Gachantivá</b><span>Aliado local</span></div>
+        <div><b>Crédito Finagro</b><span>Línea de turismo rural</span></div>
+      </div>
+      <p class="proto" style="text-align:center;margin-top:14px">Fuente: Herramienta Financiera ECONEXO, noviembre 2026.</p>
     </div>
   </section>
 
@@ -743,7 +780,7 @@ footer strong{color:#fff;font-family:var(--display)}
             <div class="meta"><span><svg class="ico"><use href="#i-clock"/></svg>6 h 45 min</span><span><svg class="ico"><use href="#i-users"/></svg>Máx. 30</span></div>
             <h3>Taller Vivencial de Acuaponía · Universidades</h3>
             <p>Viaje del nitrógeno, 3 estaciones prácticas, almuerzo de la finca y un reto aplicado a tu carrera.</p>
-            <div class="foot"><span class="price">100.000 COP <small>/ estudiante</small></span><a class="btn btn-forest" href="#taller-universitario">Ver itinerario</a></div>
+            <div class="foot"><span class="price">171.360 COP <small>/ estudiante</small></span><a class="btn btn-forest" href="#taller-universitario">Ver itinerario</a></div>
           </div>
         </article>
         <article class="card link" data-cat="col" data-soon>
@@ -753,7 +790,7 @@ footer strong{color:#fff;font-family:var(--display)}
             <div class="meta"><span><svg class="ico"><use href="#i-clock"/></svg>Media jornada</span><span><svg class="ico"><use href="#i-users"/></svg>Grupos escolares</span></div>
             <h3>Salida pedagógica · Colegios</h3>
             <p>Ciencias naturales y uso del agua con juegos, siembra y peces.</p>
-            <div class="foot"><span class="price">80.000–130.000 COP <small>público / privado</small></span></div>
+            <div class="foot"><span class="price">Precio por definir</span></div>
           </div>
         </article>
         <article class="card link" data-cat="pro" data-soon>
@@ -763,7 +800,7 @@ footer strong{color:#fff;font-family:var(--display)}
             <div class="meta"><span><svg class="ico"><use href="#i-clock"/></svg>1 día</span><span><svg class="ico"><use href="#i-users"/></svg>Grupos pequeños</span></div>
             <h3>Acuaponía para tu casa · Profesionales</h3>
             <p>Para quien quiere producir su propio alimento y desconectarse de la ciudad.</p>
-            <div class="foot"><span class="price">150.000 COP <small>/ persona</small></span></div>
+            <div class="foot"><span class="price">Precio por definir</span></div>
           </div>
         </article>
         <article class="card link" data-cat="kit" data-href="#kits">
@@ -773,7 +810,7 @@ footer strong{color:#fff;font-family:var(--display)}
             <div class="meta"><span><svg class="ico"><use href="#i-tool"/></svg>Se arma en 20 min</span><span><svg class="ico"><use href="#i-sprout"/></svg>2–3 plantas</span></div>
             <h3>Mi primera acuaponía</h3>
             <p>Todo en una caja para empezar en casa o en el aula.</p>
-            <div class="foot"><span class="price">60.000 COP</span><a class="btn btn-ghost" href="#kits">Ver kit</a></div>
+            <div class="foot"><span class="price">74.970 COP</span><a class="btn btn-ghost" href="#kits">Ver kit</a></div>
           </div>
         </article>
         <article class="card link" data-cat="kit" data-href="#kits">
@@ -798,7 +835,7 @@ footer strong{color:#fff;font-family:var(--display)}
         <p class="lead">Lo que aprendiste en la finca, en una caja. La finca arma cada kit con sus plantas, y cada compra la apoya.</p>
       </div>
       <div class="ways">
-        <div class="way"><div class="tile"><svg class="ico"><use href="#i-users"/></svg></div><h3>Con tu grupo</h3><p>Tu docente agrega el <b>seguimiento de 4 semanas</b>: un kit básico por grupo de 4–5 estudiantes, medición semanal en casa y entrega final para la nota.</p><span class="way-price">12.000–15.000 COP por persona</span></div>
+        <div class="way"><div class="tile"><svg class="ico"><use href="#i-users"/></svg></div><h3>Con tu grupo</h3><p>Tu docente agrega el <b>seguimiento de 4 semanas</b>: un kit básico por grupo de 4–5 estudiantes, medición semanal en casa y entrega final para la nota.</p><span class="way-price">15.000–19.000 COP por persona</span></div>
         <div class="way"><div class="tile"><svg class="ico"><use href="#i-sprout"/></svg></div><h3>Para ti</h3><p>Resérvalo antes del taller. Ese día te llevas el sistema que armaste en la estación 3 con <b>tu planta adoptada</b>.</p><span class="way-price">Desde 30.000 COP</span></div>
         <div class="way"><div class="tile"><svg class="ico"><use href="#i-flask"/></svg></div><h3>Para tu laboratorio o colegio</h3><p>Kit completo para prácticas y semilleros, kits de clase para colegios y <b>repuestos</b> cada semestre: semillas, kits de medición y alevines.</p><span class="way-price">Con factura institucional</span></div>
       </div>
@@ -831,7 +868,7 @@ footer strong{color:#fff;font-family:var(--display)}
             <span class="pill" style="justify-self:start"><svg class="ico"><use href="#i-sprout"/></svg>Kit básico</span>
             <h3>Mi primera acuaponía</h3>
             <p class="tagline">Un pequeño sistema, un gran aprendizaje.</p>
-            <div class="kit-price"><span class="price">60.000 COP</span><span class="proto">IVA y envío por definir</span></div>
+            <div class="kit-price"><span class="price">74.970 COP</span><span class="proto">Envío por definir</span></div>
             <ul class="kit-inc">
               <li><span class="dot">1</span><span><b>Recipiente transparente</b><small>Depósito de 5–7 L</small></span></li>
               <li><span class="dot">2</span><span><b>Minibomba y manguera</b><small>Para que circule el agua</small></span></li>
@@ -925,7 +962,7 @@ footer strong{color:#fff;font-family:var(--display)}
           <li>Almuerza lo que tú mismo cosechaste</li>
           <li>Resuelve un reto real según tu carrera</li>
         </ul>
-        <p class="note">Tu pago se reparte entre la familia campesina, la protección del agua y el robledal, y la operación de ECONEXO.</p>
+        <p class="note">Tu pago se reparte entre la familia campesina, la operación de ECONEXO y el agua de la vereda, vía Fundación Morichales.</p>
       </div>
     </div>
   </section>
@@ -993,7 +1030,7 @@ footer strong{color:#fff;font-family:var(--display)}
     <div class="wrap book">
       <div class="includes">
         <span class="eyebrow">Precio por estudiante</span>
-        <span class="price">100.000 COP</span>
+        <span class="price">171.360 COP</span>
         <div class="inc-list">
           <div><svg class="ico"><use href="#i-plate"/></svg>Refrigerio y almuerzo de la finca</div>
           <div><svg class="ico"><use href="#i-flask"/></svg>Reactivos, materiales y bitácora de campo</div>
@@ -1001,6 +1038,7 @@ footer strong{color:#fff;font-family:var(--display)}
           <div><svg class="ico"><use href="#i-cert"/></svg>Certificado UPTC · Fundación Morichales</div>
           <div><svg class="ico"><use href="#i-sprout"/></svg>Tu planta adoptada</div>
         </div>
+        <p class="proto"><b>Servicio de toma de datos:</b> 174.038 COP. La finca mide y registra el sistema para tu investigación.</p>
         <p class="proto">Opcional: <a href="#kits">kits para llevar</a> desde 30.000 COP, o el seguimiento de 4 semanas con un kit por grupo. Trae botas, ropa abrigada, impermeable y bloqueador.</p>
       </div>
       <form class="req" id="reqForm" novalidate>
@@ -1019,6 +1057,7 @@ footer strong{color:#fff;font-family:var(--display)}
           <label class="radio" for="k2"><input type="radio" id="k2" name="kit" value="Kit para cada estudiante"> Kit básico para cada estudiante</label>
           <label class="radio" for="k3"><input type="radio" id="k3" name="kit" value="Kit completo para laboratorio"> Kit completo para nuestro laboratorio</label>
         </fieldset>
+        <label class="radio" for="f-data"><input type="checkbox" id="f-data" name="data" value="Servicio de toma de datos"> Agregar servicio de toma de datos (174.038 COP)</label>
         <label for="f-mail">Correo del docente<input id="f-mail" name="mail" type="email" placeholder="docente@universidad.edu.co"></label>
         <button class="btn btn-sun" type="submit" style="justify-self:start">Enviar solicitud <svg class="ico"><use href="#i-arrow"/></svg></button>
         <div class="ok" id="okMsg" hidden></div>
@@ -1032,7 +1071,7 @@ footer strong{color:#fff;font-family:var(--display)}
 <footer>
   <div class="wrap">
     <div><strong>ECONEXO</strong><br>El Campo como Aula Viva · Finca El Roble, Gachantivá</div>
-    <div>Con UPTC y Fundación Morichales<br>“La educación es la mejor herramienta de conservación.”</div>
+    <div>Con UPTC y Fundación Morichales<br>“El agua que cuidas, vuelve.”</div>
   </div>
 </footer>
 
@@ -1150,7 +1189,7 @@ footer strong{color:#fff;font-family:var(--display)}
   document.getElementById('reqForm').addEventListener('submit',function(e){
     e.preventDefault(); var f=e.target, ok=document.getElementById('okMsg');
     var uni=f.uni.value.trim()||'tu universidad';
-    ok.textContent='¡Listo! Recibimos la solicitud de '+uni+' para '+(f.n.value||'—')+' estudiantes ('+(f.kit.value||'Sin kit')+'). Te enviaremos la propuesta en 5 días hábiles.';
+    ok.textContent='¡Listo! Recibimos la solicitud de '+uni+' para '+(f.n.value||'—')+' estudiantes ('+(f.kit.value||'Sin kit')+(f.data.checked?', con toma de datos':'')+'). Te enviaremos la propuesta en 5 días hábiles.';
     ok.hidden=false;
   });
 
@@ -1190,8 +1229,8 @@ footer strong{color:#fff;font-family:var(--display)}
   /* cycle */
   var cyc=[
     ["Educación","Universidades y colegios vienen a la finca a aprender acuaponía haciendo, guiados por la familia campesina."],
-    ["Ingreso","El pago del taller y la venta de kits se reparten de forma justa: la mayor parte es para la familia campesina y una parte sostiene a ECONEXO, que organiza, certifica y da a conocer los talleres."],
-    ["Conservación","Una parte del ingreso protege las fuentes de agua y el robledal del corredor Gachantivá–Arcabuco."],
+    ["Ingreso","Los talleres, el servicio de toma de datos y los kits le dan a la familia campesina un ingreso estable. Una parte sostiene a ECONEXO, que organiza, vende y certifica."],
+    ["Conservación","Con la campaña «El agua que cuidas, vuelve», parte de cada taller va al agua de la vereda a través de la Fundación Morichales. Además, la acuaponía reutiliza el agua."],
     ["Bienestar","La familia vive de su saber y los jóvenes de la vereda ven un futuro en el campo."],
     ["Reinversión","La finca mejora su sistema e infraestructura, recibe más grupos y enseña mejor. El círculo vuelve a empezar."]];
   var cInfo=document.getElementById('cInfo'), cNodes=document.querySelectorAll('.c-node');

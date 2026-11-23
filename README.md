@@ -6,6 +6,6 @@ Prototipo de página web para los talleres vivenciales de acuaponía en la Finca
 - **Talleres**: catálogo y kits de acuaponía
 - **Itinerario**: el día completo del taller universitario, con módulos por carrera
 
-Es un solo archivo: abre `index.html` en el navegador. Para publicarla, activa GitHub Pages (Settings → Pages → rama `main`, carpeta raíz).
+Versión en línea: https://aulaviva-blond.vercel.app · Es un solo archivo: abre `index.html` en el navegador.
 
 > Prototipo académico. Algunas fotos son de referencia y deben reemplazarse por fotos propias o con licencia antes de un uso público.
