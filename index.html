@@ -483,18 +483,6 @@ footer strong{color:#fff;font-family:var(--display)}
 .stat{margin-top:14px;font-size:.98rem;color:#E8EAE4;border-left:3px solid #B9D79A;padding-left:14px}
 .stat b{font-family:var(--display);font-size:1.4rem;color:#fff;margin-right:4px}
 .stat small{display:block;color:#C9CEC6;font-size:.78rem;margin-top:4px}
-.fin{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:var(--char);color:#E8EAE4;border-radius:26px;padding:30px 8px}
-@media (max-width:820px){.fin{grid-template-columns:1fr}.fin-kpi + .fin-kpi{border-left:0!important;border-top:1px solid rgba(255,255,255,.18);padding-top:20px!important;margin-top:16px}}
-.fin-kpi{display:grid;gap:4px;justify-items:center;text-align:center;padding:4px 24px}
-.fin-kpi + .fin-kpi{border-left:1px solid rgba(255,255,255,.18)}
-.fin-kpi span{font-family:var(--display);text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;color:#B9D79A}
-.fin-kpi b{font-family:var(--display);font-size:2.4rem;color:#fff;font-variant-numeric:tabular-nums;line-height:1.1}
-.fin-kpi small{color:#C9CEC6;font-size:.85rem}
-.funders{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
-@media (max-width:820px){.funders{grid-template-columns:1fr}}
-.funders div{background:var(--cream);border-radius:16px;padding:14px 16px;display:grid;gap:2px;text-align:center}
-.funders b{font-family:var(--display)}
-.funders span{color:var(--muted);font-size:.9rem;font-style:italic}
 </style>
 
 <!-- ======= SVG library ======= -->
@@ -720,27 +708,6 @@ footer strong{color:#fff;font-family:var(--display)}
           </div>
         </article>
       </div>
-    </div>
-  </section>
-
-  <section class="band" style="padding-top:0">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">Para aliados</span>
-        <h2>Un proyecto con respaldo</h2>
-        <p class="lead">ECONEXO conecta a la academia, el gobierno y la comunidad campesina. La infraestructura se financia con aliados públicos y se recupera con los talleres.</p>
-      </div>
-      <div class="fin">
-        <div class="fin-kpi"><span>Inversión inicial</span><b>28,9 M</b><small>COP · tanques, bombas, equipos de medición, cuidador de peces, kits</small></div>
-        <div class="fin-kpi"><span>Ingresos año 1</span><b>136,7 M</b><small>COP · egresos operativos 119,3 M</small></div>
-        <div class="fin-kpi"><span>Recuperación</span><b>Mes 16</b><small>Con 40 estudiantes al mes al inicio</small></div>
-      </div>
-      <div class="funders">
-        <div><b>Gobernación de Boyacá</b><span>Fondo FINCA</span></div>
-        <div><b>Alcaldía de Gachantivá</b><span>Aliado local</span></div>
-        <div><b>Crédito Finagro</b><span>Línea de turismo rural</span></div>
-      </div>
-      <p class="proto" style="text-align:center;margin-top:14px">Fuente: Herramienta Financiera ECONEXO, noviembre 2026.</p>
     </div>
   </section>
 
@@ -1057,7 +1024,6 @@ footer strong{color:#fff;font-family:var(--display)}
           <label class="radio" for="k2"><input type="radio" id="k2" name="kit" value="Kit para cada estudiante"> Kit básico para cada estudiante</label>
           <label class="radio" for="k3"><input type="radio" id="k3" name="kit" value="Kit completo para laboratorio"> Kit completo para nuestro laboratorio</label>
         </fieldset>
-        <label class="radio" for="f-data"><input type="checkbox" id="f-data" name="data" value="Servicio de toma de datos"> Agregar servicio de toma de datos (174.038 COP)</label>
         <label for="f-mail">Correo del docente<input id="f-mail" name="mail" type="email" placeholder="docente@universidad.edu.co"></label>
         <button class="btn btn-sun" type="submit" style="justify-self:start">Enviar solicitud <svg class="ico"><use href="#i-arrow"/></svg></button>
         <div class="ok" id="okMsg" hidden></div>
@@ -1189,7 +1155,7 @@ footer strong{color:#fff;font-family:var(--display)}
   document.getElementById('reqForm').addEventListener('submit',function(e){
     e.preventDefault(); var f=e.target, ok=document.getElementById('okMsg');
     var uni=f.uni.value.trim()||'tu universidad';
-    ok.textContent='¡Listo! Recibimos la solicitud de '+uni+' para '+(f.n.value||'—')+' estudiantes ('+(f.kit.value||'Sin kit')+(f.data.checked?', con toma de datos':'')+'). Te enviaremos la propuesta en 5 días hábiles.';
+    ok.textContent='¡Listo! Recibimos la solicitud de '+uni+' para '+(f.n.value||'—')+' estudiantes ('+(f.kit.value||'Sin kit')+'). Te enviaremos la propuesta en 5 días hábiles.';
     ok.hidden=false;
   });
 
